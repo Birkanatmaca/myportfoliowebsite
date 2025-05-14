@@ -1,0 +1,22 @@
+.cv-container {
+  padding-top: 10px;
+  padding-left: 300px;
+  padding-right: 300px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 32px;
+  color: white;
+  text-align: center;
+  background-color: #0e0e0e;
+  height: 150vh;
+
+  h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  iframe {
+    border: 2px solid rgba(229, 90, 20, 0.8);
+    border-radius: 12px;
+    height: 110vh;
+  }
+}

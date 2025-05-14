@@ -1,0 +1,138 @@
+/* navbar.scss */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #0e0e0e, #2e2e2e);
+  padding: 20px 40px;
+  box-shadow: 0 10px 15px rgba(89, 30, 1, 0.751);
+  backdrop-filter: blur(4px);
+}
+
+.navbar-logo {
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 14px;
+    border: 2px solid rgba(229, 90, 20, 0.751);
+    border-radius: 30px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color:  rgb(255, 104, 28);
+      border-color:  rgba(229, 90, 20, 0.751);
+      background-color: rgba(0, 255, 245, 0.1);
+      transform: scale(1.1);
+    }
+  }
+}
+
+.hamburger {
+  display: none;
+  color: rgba(229, 90, 20, 0.751);
+  font-size: 28px;
+  cursor: pointer;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(14px);
+  background: linear-gradient(135deg, #0e0e0e, #2e2e2e);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  gap: 25px;
+  animation: slideInRight 0.4s ease forwards;
+
+  &.closing {
+    animation: slideOutRight 0.4s ease forwards;
+  }
+
+  a {
+    color: #e0e0e0;
+    font-size: 20px;
+    padding: 10px 24px;
+    border: 2px solid rgba(229, 90, 20, 0.751);
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: rgba(229, 90, 20, 0.751);
+      border-color: rgba(229, 90, 20, 0.751);
+      background: linear-gradient(135deg, #0e0e0e, #2e2e2e);
+      transform: scale(1.1);
+    }
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: #00FFF5;
+    cursor: pointer;
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}

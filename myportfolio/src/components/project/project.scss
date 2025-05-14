@@ -1,0 +1,173 @@
+.project-section {
+    background: linear-gradient(135deg, #0e0e0e, #2e2e2e);
+    padding: 40px 20px;
+    padding-top: 5px;
+    min-height: 100px;
+  }
+  
+  .project-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 30px;
+    padding-top: 5px;
+    font-family: 'Orbitron', sans-serif;
+        @media (max-width: 768px) {
+        padding-top: 10px;
+        font-size: 24px;
+    }
+  }
+  
+  .project-card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .project-card {
+    width: 80%;
+    max-width: 600px;
+    background: linear-gradient(10deg, #0e0e0e, #2e2e2e);
+    color: rgba(229, 90, 20, 0.751);
+    border-radius: 20px;
+    padding: 25px;
+    backdrop-filter: blur(4px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    background-color: #161616;
+    box-shadow: 0 15px 40px rgba(89, 30, 1, 0.751);
+  }
+  
+  .project-card-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgba(229, 90, 20, 0.751);
+    margin-bottom: 15px;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+  }
+  
+  .detail-button {
+    padding: 10px 20px;
+    background-color: rgba(114, 114, 114, 0.751); /* Navbar logosu rengi */
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    display: block;
+    margin: 0 auto;
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(224, 224, 224, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  .detail-button:hover {
+    background-color: rgba(61, 61, 61, 0.751); /* Navbar logosu rengi */
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px rgba(224, 224, 224, 0.3);
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(18, 18, 18, 0.75); /* Gecikmiş karanlık ton */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  .modal-content {
+    background-color: #0e0e0e; /* Koyu arka plan navbar uyumu */
+    padding: 30px 40px;
+    border-radius: 20px;
+    max-width: 600px;
+    width: 90%;
+    color: #fff;
+    position: relative;
+    box-shadow: 0 15px 40px rgba(89, 30, 1, 0.751);
+  }
+  
+  .modal-content h2 {
+    color: rgba(229, 90, 20, 0.751); /* Modal başlığına navbar logosu rengi */
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  .modal-content p {
+    text-align: center;
+    line-height: 1.6;
+    font-size: 16px;
+    opacity: 0.9;
+  }
+  
+  .modal-close {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: rgba(246, 246, 246, 0.751); /* X butonu navbar uyumlu */
+    cursor: pointer;
+    transition: transform 0.2s, color 0.2s ease;
+  }
+  
+  .modal-close:hover {
+    color: rgba(229, 90, 20, 0.751); /* Renk geçişi hover'da */
+    transform: scale(1.2);
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .project-card {
+      width: 90%;
+      padding: 20px;
+    }
+  
+    .project-card-title {
+      font-size: 20px;
+    }
+  
+    .detail-button {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  
+    .modal-content {
+      padding: 20px;
+    }
+  
+    .modal-content h2 {
+      font-size: 22px;
+    }
+  
+    .modal-content p {
+      font-size: 16px;
+    }
+  }
+  
